@@ -5,6 +5,7 @@ esbuild
     entryPoints: ["src/index.tsx"],
     bundle: true,
     minify: true,
+    treeShaking: true,
     outfile: "../server/public/client/bundle.js",
   })
   .then((ctx) => {

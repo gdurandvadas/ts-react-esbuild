@@ -16,6 +16,12 @@ importers:
 
   app/client:
     dependencies:
+      '@mr/button':
+        specifier: workspace:^
+        version: link:../../packages/button
+      '@mr/types':
+        specifier: workspace:^
+        version: link:../../packages/types
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -46,9 +52,17 @@ importers:
         specifier: ^2.0.22
         version: 2.0.22
 
-  packages/button: {}
+  packages/button:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+    devDependencies:
+      '@types/react':
+        specifier: ^18.2.6
+        version: 18.2.6
 
-  packages/methods: {}
+  packages/types: {}
 
 packages:
 
