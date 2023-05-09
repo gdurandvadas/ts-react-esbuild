@@ -1,5 +1,5 @@
 # ---- Build Stage ----
-FROM node:16-alpine AS builder
+FROM node:18-alpine AS builder
 
 # Set working directory
 WORKDIR /build
@@ -17,13 +17,10 @@ RUN pnpm install --frozen-lockfile
 RUN pnpm build
 
 # ---- Release Stage ----
-FROM node:16-alpine
+FROM node:18-alpine
 
 # Set environment variables
 ENV NODE_ENV production
-
-# Install PM2 and pnpm globally
-RUN npm install -g pm2
 
 # Create app directory
 WORKDIR /app
