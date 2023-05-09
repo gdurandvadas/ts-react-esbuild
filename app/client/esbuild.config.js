@@ -1,14 +1,25 @@
-const esbuild = require("esbuild");
+import { context, build } from 'esbuild';
 
-esbuild
-  .context({
-    entryPoints: ["src/index.tsx"],
+const development = process.argv.includes('--dev');
+
+if (development) {
+  context({
+    entryPoints: ['src/index.tsx'],
+    bundle: true,
+    minify: false,
+    outfile: '../server/public/client/bundle.js'
+  })
+    .then((ctx) => {
+      ctx.watch().catch((err) => console.error(err));
+    })
+    .catch((err) => console.error(err));
+} else {
+  build({
+    entryPoints: ['src/index.tsx'],
     bundle: true,
     minify: true,
     treeShaking: true,
-    outfile: "../server/public/client/bundle.js",
+    outfile: '../server/public/client/bundle.js'
   })
-  .then((ctx) => {
-    ctx.watch().catch((err) => console.error(err));
-  })
-  .catch((err) => console.error(err));
+    .catch((err) => console.error(err));
+}
