@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "node esbuild.config.js --dev"
+    "dev": "node esbuild.config.js --dev",
+    "build": "node esbuild.config.js"
   },
   "keywords": [],
   "author": "",

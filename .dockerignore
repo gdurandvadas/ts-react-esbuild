@@ -1,0 +1,22 @@
+# Ignore git and its related files
+.git
+.gitignore
+
+# Ignore logs and cache
+logs/
+.cache/
+*.log
+
+# Ignore local development files
+.env
+.env.local
+.env.development
+
+# Ignore node modules and related files
+node_modules/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo

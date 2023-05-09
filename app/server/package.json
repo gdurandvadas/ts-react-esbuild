@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "nodemon --exec 'node -r esbuild-register src/index.ts' -e .ts"
+    "dev": "nodemon --exec 'node -r esbuild-register src/index.ts' -e .ts",
+    "build": "node esbuild.config.js"
   },
   "keywords": [],
   "author": "",
