@@ -131,3 +131,4 @@ dist
 
 # esbuild
 app/server/public/client
+app/server/index.js

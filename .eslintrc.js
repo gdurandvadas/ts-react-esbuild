@@ -6,7 +6,7 @@ module.exports = {
   extends: ['plugin:react/recommended', 'standard-with-typescript'],
   overrides: [],
   ignorePatterns: [
-    'node_modules', '**/public/client/**'
+    'node_modules', '**/public/client/**', '**/server/index.js'
   ],
   parserOptions: {
     ecmaVersion: 'latest',
