@@ -1,12 +1,12 @@
-const esbuild = require('esbuild');
+const esbuild = require("esbuild");
 
 esbuild
   .build({
-    entryPoints: ['src/index.ts'],
+    entryPoints: ["src/index.ts"],
     bundle: true,
     minify: true,
     treeShaking: true,
-    platform: 'node',
-    outfile: 'index.js'
+    platform: "node",
+    outfile: "index.js",
   })
   .catch((err) => console.error(err));

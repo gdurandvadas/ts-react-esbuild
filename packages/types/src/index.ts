@@ -1,4 +1,4 @@
 export type MonoType = {
-  name: string
-  version: string
-}
+  name: string;
+  version: string;
+};
