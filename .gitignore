@@ -130,5 +130,5 @@ dist
 .pnp.*
 
 # esbuild
-app/server/public/client
-app/server/index.js
+app/server/*
+!app/server/index.html
